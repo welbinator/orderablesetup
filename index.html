@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header><img src="assets/img/orderable-logo.svg"></header>
+    <section class="hero">
+        <video controls poster="assets/img/intro.jpg" src="assets/img/test.mp4" class="intro"></video>
+        
+    </section>
+
+    <section class="hosting">
+        <video controls poster="assets/img/intro-hosting-thumb.jpg" class="intro"></video>
+        <div class="buttons">
+            <button class="nexcess-hosting">Nexcess Hosting</button>
+            <button class="godaddy-hosting">GoDaddy Hosting</button>
+            <button class="siteground-hosting">Siteground Hosting</button>
+        </div>
+        <div class="videos">
+            <img class="placeholder" src="assets/img/choose-hosting.jpg">
+            <video controls poster="assets/img/nexcess-hosting.jpg" class="nexcess hide"></video>
+            <video controls poster="assets/img/godaddy-hosting.jpg" class="godaddy hide"></video>
+            <video controls src="" class="siteground hide"></video>
+        </div>
+        
+    </section>
+
+    <section class="dns">
+        <video controls poster="assets/img/intro-dns-thumb.jpg" class="intro"></video>
+        <div class="buttons">
+            <button class="google-dns">Google Domains</button>
+            <button class="godaddy-dns">GoDaddy Domains</button>
+        </div>
+        <div class="videos">
+            <img class="placeholder" src="assets/img/choose-domain.jpg">
+            <video controls src="" class="google-dns hide"></video>
+            <video controls src="" class="godaddy-dns hide"></video>
+        </div>
+        
+    </section>
+
+
+    <script>
+        const nexcessHostingButton = document.querySelector("button.nexcess-hosting");
+        const godaddyHostingButton = document.querySelector("button.godaddy-hosting");
+        const sitegroundHostingButton = document.querySelector("button.siteground-hosting");
+        const googleDNSButton = document.querySelector("button.google-dns");
+        const godaddyDNSButton = document.querySelector("button.godaddy-dns");
+
+        const nexcessHostingVideo = document.querySelector("video.nexcess");
+        const godaddyHostingVideo = document.querySelector("video.godaddy");
+
+        nexcessHostingButton.addEventListener("click", () => { 
+            nexcessHostingVideo.classList.remove("hide");
+            godaddyHostingVideo.classList.add("hide"); 
+        } );
+
+        godaddyHostingButton.addEventListener("click", () => { 
+            godaddyHostingVideo.classList.remove("hide");
+            nexcessHostingVideo.classList.add("hide"); 
+        } );
+            
+            </script>
+</body>
+</html>
